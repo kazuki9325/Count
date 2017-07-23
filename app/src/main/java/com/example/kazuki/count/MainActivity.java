@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 
@@ -11,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
     int count;
     TextView textView;
 
+    // プログラムに変更を加える
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
     }
     public void add (View v){
         count = count + 1;
-        textView.setText("" + count);
+//        textView.setText("" + count);
+        textView.setText(String.valueOf(count));
         if (count%2==0){
             textView.setTextColor(Color.rgb(255,0,0));
         }
@@ -32,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void minus (View v){
         count = count - 1;
-        textView.setText("" + count);
+//        textView.setText("" + count);
+        textView.setText(String.valueOf(count));
         if (count%2==0){
             textView.setTextColor(Color.rgb(255,0,0));
         }
